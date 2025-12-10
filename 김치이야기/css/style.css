@@ -1,0 +1,354 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+li{list-style: none;}
+a{color: #333; text-decoration: none;}
+
+html, body{height: 100%;}
+
+
+#wrap{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+main{
+    width: 100%;
+    height: calc(100% - 120px);
+    display: flex;
+}
+
+
+
+#header{
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #ccc;
+}
+#header h1{
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+#nav{
+    width: 95%;
+    margin: 30px auto;
+}
+#nav>ul{}
+#nav>ul>li{
+    margin-top: -1px;
+    border: 1px solid #ccc;
+}
+#nav>ul>li>a{
+    display: block;
+    padding: 10px;
+    transition: .3s;
+}
+#nav>ul>li:hover>a{
+    background: red;
+    color: #fff;
+}
+
+#nav>ul>li:hover>ul{}
+#nav>ul>li>ul{display: none;}
+#nav>ul>li>ul>li{}
+#nav>ul>li>ul>li>a{
+    padding: 10px;
+    display: block;
+    transition: .3s;
+}
+#nav>ul>li>ul>li:hover>a{
+    background: rgb(135, 0, 0);
+    color: #fff;
+}
+
+
+
+#header .spot{}
+#header .spot>ul{
+    display: flex;
+    justify-content: center;
+}
+#header .spot>ul>li{}
+#header .spot>ul>li>a{
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+#header .spot>ul>li>a:hover{
+    text-decoration: underline;
+    color: red;
+}
+#header .spot>ul>li:first-child>a::after{
+    display: block;
+    content: "";
+    width: 1px;
+    height: 15px;
+    background: #333;
+    position: absolute;
+    top: 14px; left: 68px;
+}
+
+
+.contents{
+    width: 400px;
+    height: 100%;
+    border-right: 1px solid #ccc;
+}
+
+
+.contents .banner{
+    width: 400px;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+.contents .banner img{
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+.contents .banner .bannerType{
+    font-size: 14px;
+    margin: 10px;
+}
+.contents .banner .bannerType p{
+    font-size: 12px;
+    margin-top: 5px;
+}
+.contents .banner a img{
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+
+.contents .notice{
+    width: 400px;
+    height: 35%;
+    padding: 10px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+}
+.contents .notice>a{
+    font-size: 16px;
+    background: #eee;
+    padding: 5px 10px;
+    position: relative;
+    top: 10px; left: 20px;
+}
+.contents .notice .noticeContents{
+    margin: 10px auto;
+    padding: 10px 20px;
+    width: 95%;
+    height: 80%;
+    background: #eee;
+    position: relative;
+    top: 5px; left: 0;
+}
+.contents .notice .noticeContents ul li{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    padding: 10px 0;
+    margin-top: 5px;
+}
+.contents .notice .noticeContents ul li a{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 65%;
+}
+.contents .notice .noticeContents ul li a:hover{color: red;}
+
+
+.contents .gallery{
+    width: 400px;
+    height: 35%;
+    padding: 10px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+}
+.contents .gallery>a{
+    font-size: 16px;
+    background: #eee;
+    padding: 5px 10px;
+    position: relative;
+    top: 10px; left: 20px;
+}
+
+
+.contents .gallery .galleryContents{
+    margin: 10px auto;
+    padding: 10px 20px;
+    width: 95%;
+    height: 80%;
+    background: #eee;
+    position: relative;
+    top: 5px; left: 0;
+    text-align: center;
+}
+.contents .gallery .galleryContents ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.contents .gallery .galleryContents ul>li>a>img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+
+.contents .goto{
+    width: 400px;
+    height: 15%;
+    padding: 10px;
+    text-align: center;
+}
+.contents .goto ul{
+    display: flex;
+    justify-content: space-between;
+}
+.contents .goto ul li a img{
+    display: block;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+}
+.contents .goto ul li a span{
+    font-size: 12px;
+}
+
+
+
+
+
+.mainslider{
+    width: calc(100% - 600px);
+    height: 100%;
+    background: skyblue;
+    overflow: hidden;
+}
+.mainslider ul{
+    display: flex;
+    /* flex-wrap: wrap; */
+    position: relative;
+    top: 0; left: 0;
+    width: 100%;
+}
+.mainslider ul li{
+    width: 100%;
+    flex-shrink: 0;
+}
+.mainslider ul li a{}
+.mainslider ul li a img{
+    /* width: 100%; */
+}
+
+
+
+
+#footer{
+    width: 100%;
+    height: 120px;
+    background: rgb(142, 142, 142);
+    display: flex;
+}
+#footer h1{
+    width: 200px;
+    height: 100%;
+    text-align: center;
+    color: #666;
+    padding-top: 20px;
+    border-right: 1px solid #ccc;
+}
+#footer .footerRight{
+    width: calc(100% - 200px);
+    
+}
+
+
+#footer .footerTop{
+    border-bottom: 1px solid #ccc;
+    height: 50%;
+    width: 100%;
+    padding-left: 50px;
+    line-height: 60px;
+}
+#footer .footerTop ul{
+    display: flex;
+}
+#footer .footerTop ul li{}
+#footer .footerTop ul li a{
+    padding: 0 30px;
+    padding-left: 0;
+    position: relative;
+}
+#footer .footerTop ul li:not(:last-child) a:after{
+    content: "";
+    width: 1px;
+    height: 15px;
+    position: absolute;
+    top: 4px; left: 78px;
+    background: #333;
+}
+
+
+#footer .footerBottom{
+    height: 50%;
+    width: 100%;
+    padding-left: 50px;
+    /* line-height: 60px; */
+    padding-top: 20px;
+}
+#footer .footerBottom p{
+    font-size: 15px;
+}
+
+
+
+
+
+.popup{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .6);
+    position: absolute;
+    top: 0; left: 0;
+}
+.popup .modal{
+    width: 500px;
+    height: 500px;
+    background: #fff;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+}
+.popup .modal h2{
+    border-bottom: 3px double #ccc;
+    padding-bottom: 10px;
+}
+.popup .modal p{
+    margin-top: 20px;
+    line-height: 150%;
+}
+.popup .modal .close{
+    background: red;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    position: absolute;
+    bottom: 50px; left: 220px;
+}

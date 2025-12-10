@@ -1,0 +1,326 @@
+*{padding: 0; margin: 0; box-sizing: border-box;}
+body{background: #fff; color: #333}
+a{text-decoration: none; color: #333}
+li{list-style: none;}
+
+#wrap{
+    width: 100%;
+    height: 950px;
+    /* background: #ffd6d6; */
+}
+
+#mainWrap{display: flex;}
+
+#header{
+    height: 850px;
+    width: 200px;
+    border-right: 1px solid #333;
+}
+#header h1{
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 2px dotted #ddd;
+}
+
+
+#nav{
+    width: 90%;
+    height: 168px;
+    background: #ffffff;
+    margin: 30px auto;
+}
+#nav>ul.menu>li>a{
+    font-weight: 600;
+    display: block;
+    padding: 10px;
+    align-items: center;
+    border: 1px solid #333;
+    margin-top: -1px;
+}
+#nav>ul.menu>li{transition: .3s;}
+#nav>ul.menu>li:hover{
+    background: #ccc;
+}
+
+#nav>ul.menu>li:hover ul.submenu{
+    display: block;
+    background: #fff;
+}
+#nav ul.submenu{
+    display: none;
+    border: 1px solid #333;
+    margin-top: -1px;
+}
+#nav ul.submenu>li{transition: .3s;}
+#nav ul.submenu>li:hover{
+    background: #ccc;
+    font-weight: 600;
+}
+#nav ul.submenu>li>a{
+    display: block;
+    padding: 10px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.spot{
+    display: flex;
+    margin: 30px auto;
+    width: 100%;
+    justify-content: center;
+}
+.spot>li{position: relative;}
+.spot>li>a{
+    color: #005eff;
+    padding: 0 10px;
+    font-size: 14px;
+    display: block;
+}
+.spot>li:first-child>a::after{
+    content: "";
+    width: 1px;
+    height: 15px;
+    background: #555;
+    position: absolute;
+    top: 2px; left: 61px;
+}
+
+
+#main{
+    width: calc(100% - 200px);
+    height: 850px;
+    background: rgb(47, 255, 241);
+    display: block;
+    
+}
+
+/* 개어렵네쉽지않음 */
+#main .mainSlider{
+    width: 100%;
+    height: 400px;  
+    border-bottom: 1px solid #555;
+    position: relative;
+}
+.mainSlider .imgslider{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.mainSlider .imgslider>ul{
+    display: block;
+}
+.mainSlider .imgslider>ul>li{}
+.mainSlider .imgslider>ul>li>a{}
+.mainSlider .imgslider>ul>li>a>img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 쉽지않음2 */
+.mainSlider .links{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0; right: 0;
+}
+.mainSlider .links>ul{
+    display: block;
+}
+.mainSlider .links>ul>li{}
+.mainSlider .links>ul>li>a{}
+.mainSlider .links>ul>li>a>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+#main .banner{
+    width: 100%;
+    height: 200px;
+    /* background: lime; */
+    border-bottom: 2px dotted #555;
+    display: flex;
+    align-items: center;
+}
+.banner .bannerWrap{
+    display: flex;
+    background: #ccc;
+    width: 95%;
+    height: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.banner .bannerWrap img{
+    display: block;
+    width: 20%;
+    height: 100px;
+    object-fit: contain;
+}
+.banner .bannerWrap span{
+    width: 80%;
+}
+.banner .bannerWrap span h4{}
+.banner .bannerWrap span p{}
+.banner .bannerWrap div{
+    width: 20%;
+    padding: 40px;
+}
+
+
+
+#main .tabs{
+    width: 100%;
+    height: 250px;
+    background: skyblue;
+}
+#main .tabs .tabsmenu{}
+#main .tabs .tabsmenu ul{display: flex;}
+#main .tabs .tabsmenu ul li{}
+#main .tabs .tabsmenu ul li a{
+    display: block;
+    background: #ccc;
+    padding: 5px 10px;
+    height: 30px;
+    position: relative;
+    top: 15px; left: 55px;
+}
+
+
+#main .tabs .tabContents{
+    background: #ccc;
+    width: 95%;
+    height: 190px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+#main .tabs .notice{
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    padding: 15px 20px;
+}
+#main .tabs .notice ul{
+
+}
+#main .tabs .notice ul li{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+    font-size: 14px;
+    width: 100%;
+}
+#main .tabs .notice ul li a{
+    overflow: hidden;
+    width: 60%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#main .tabs .notice ul li span{}
+
+
+/* 쉽지않음 */
+#main .tabs .gallery{
+    display: none;
+    height: 90%;
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px;
+}
+#main .tabs .gallery ul{
+    display: flex;
+}
+#main .tabs .gallery ul li{}
+#main .tabs .gallery ul li img{
+    width: 33%;
+    height: 90%;
+    object-fit: cover;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#footer{
+    width: 100%;
+    height: 100px;
+    background: #777;
+    border-top: 1px solid #555;
+    display: flex;
+}
+#footer h2{
+    width: 200px;
+    height: 100px;
+    color: #999;
+    text-align: center;
+    line-height: 100px;
+    border-right: 1px solid #555;
+}
+#footer .footerRight{
+    width: calc(100% - 200px);
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: space-between;
+}
+#footer span{
+    width: 70%;
+    padding: 20px;
+    border-right: 1px solid #555;
+    height: 100%;
+}
+#footer .sns{
+    width: 30%;
+    /* height: 100%; */
+    
+}
+#footer .sns ul{
+    display: flex;
+    justify-content: center;
+}
+#footer .sns ul li{}
+#footer .sns ul li a{
+    padding: 20px;
+}
+
+
+
+
+.modal{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0; left: 0;
+}
+.modal .popup{
+    background: #fff;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+.modal .popup h2{
+    border-bottom: #555 3px double;
+    padding: 10px 0;
+}
+.modal .popup p{
+    padding: 10px;
+}
+.modal .popup button{
+    background: red;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+    top: 180px; left: 200px;
+}

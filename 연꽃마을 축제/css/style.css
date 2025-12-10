@@ -1,0 +1,292 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+body{background: #fff; color: #333}
+a{text-decoration: none; color: #333}
+li{list-style: none;}
+
+#wrap{
+    width: 1000px;
+    height:650px;
+    margin: 0 auto;
+    display: flex;
+    border: 1px solid #ddd;
+}
+#header{
+    width: 200px;
+    height:100%;
+   border-right: 1px solid #ddd;
+}
+#header h1{
+    padding: 10px 0;
+}
+#header h1 img{width: 100%;}
+#header #nav{
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+}
+#nav>ul{}
+#nav>ul>li{}
+#nav>ul>li>a{
+    display: block;
+    padding: 10px 0;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    text-align: center;
+    transition: .5s;
+}
+#nav>ul>li:hover>a{
+    background: #f84848;
+    color: #fff;
+}
+/* #nav>ul>li:hover ul{display: block;} */
+#nav>ul>li>ul{
+    display: none;
+}
+#nav>ul>li>ul>li{
+    
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+
+}
+#nav>ul>li>ul>li>a{
+    transition: .5s;
+    display: block;
+}
+#nav>ul>li>ul>li:hover>a{
+    background: #f2a1a1;
+    color: #fa3c3c;
+}
+#main{
+    width: 800px;
+    height:100%;
+}
+#main .imgslider{
+    width: 100%;
+    height: 350px;
+   border-bottom: 1px solid #ddd;
+   overflow: hidden;
+}
+.imgslider ul{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+.imgslider ul li{
+   position: absolute;
+   top: 0;
+   left: 0;
+    width: 100%;
+    height: 100%;
+}
+.imgslider ul li a{
+    display: block;
+    position: relative;
+     width: 100%;
+    height: 100%;
+}
+.imgslider ul li a span{
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+}
+
+
+#main .contents{
+    width: 100%;
+    height: 200px;
+     border-bottom: 1px solid #ddd;
+     display: flex;
+}
+#main .contents>div{
+   /*  width: 33.33333%; */
+    height: 100%;
+    padding: 10px;
+}
+#main .contents .notice_gallery{
+    width: 43%;
+}
+
+.tabs ul{display: flex}
+
+.tabs ul li.active a{
+    background: #fa3c3c;
+    color: #fff;
+}
+.tabs ul li a{
+    display: block;
+    width: 80px;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin-right: -1px;
+    padding: 5px;
+}
+.tabContent>div{
+    border: 1px solid #ddd;
+    padding: 10px;
+    position: absolute;
+    width: 313.38px;
+    height: 142px;
+}
+.tabContent{ background: #fff;}
+.notice ul li{font-size: 12px; 
+    height: 30px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+.notice ul li:last-child{
+     border-bottom: none;
+}
+.notice ul li a{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60%
+}
+.notice ul li a span{
+    width: 40%;
+}
+.gallery{background: #fff; display: none;}
+.gallery  ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 122px;
+}
+
+
+.contents>div>h2{
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.bn{
+    margin-top: 10px;
+    width: 100%;
+    height: 142px;
+    overflow: hidden;
+    position: relative;
+}
+.bn img{width: 100%;}
+.bn span{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: -100%; left: 0;
+    background: rgba(255, 255, 255, .6);
+    text-align: center;
+    font-weight: bold;
+    transition: .5s;
+}
+.bn:hover span{
+    bottom: 0;
+}
+
+
+#main .contents .banner{
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    width: 30%;
+}
+#main .contents .goto{
+    flex-grow: 1;
+}
+
+
+
+#main #footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+#main #footer .footerLogo{
+    width: 20%;
+    border-right: 1px solid #ddd;
+}
+#main #footer .footerMenu_copyright{
+    flex-grow: 1;
+}
+#main #footer .footerMenu_copyright .footerMenu{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+.footerLogo h2{
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.footerLogo h2 a{
+    color: #ccc;
+}
+
+.footerMenu ul{
+    display: flex;
+    justify-content: center;
+}
+.footerMenu ul li{}
+.footerMenu ul li a{
+    font-size: 12px;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+.footerMenu ul li:not(:last-child) a::after{
+    position: absolute;
+    width: 1px;
+    height: 10px;
+    content: "";
+    right: 0; top: 14px;
+    background: #ccc;
+}
+
+.footerCopyright p{
+    text-align: center;
+    line-height: 50px;
+}
+
+
+
+.modalWrap{
+    display: none;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .6);
+}
+.modalWrap .modal{
+    width: 500px;
+    height: 500px;
+    background: #fff;
+    padding: 50px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modalWrap .modal h2{
+    border-bottom: 3px double #ddd;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.modalWrap .modal p{
+    margin-top: 30px;
+    line-height: 150%;
+}
+.modalWrap .modal .close{
+    background: #fa3c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    position: relative;
+    top: 150px; left: 308px;
+}

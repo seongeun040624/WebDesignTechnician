@@ -1,0 +1,242 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul,ol,li{list-style: none;}
+a{color: #333; text-decoration: none;}
+
+
+
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+    height: 700px;
+    /* background: red; */
+}
+
+
+
+#header{
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1 a{color: #f84141;}
+
+
+
+#nav{}
+#nav>ul{display: flex;}
+#nav>ul>li{
+    border: 1px solid #ddd;
+    width: 120px;
+    text-align: center;
+    padding: 10px 0;
+    margin-left: -1px;
+    transition: .5s;
+}
+#nav>ul>li:hover{background: #f84141;}
+#nav>ul>li:hover>a{color: #fff;  transition: .5s;}
+#nav>ul>li>ul{display: none; position: absolute; background: #fffdfd; width: 120px; top:72px; z-index: 10;}
+/* #nav>ul:hover>li>ul{display: block;} */
+#nav>ul>li>ul>li{transition: .5s;}
+#nav>ul>li>ul>li:hover{background: #f67f7f;}
+#nav>ul>li>ul>li>a{
+    display: block;
+    padding: 10px 0;
+}
+#nav>ul>li>ul>li:hover>a{color: #fff}
+
+
+
+#mainslider{
+    width: 100%;
+    height: 300px;
+    background: rgb(51, 207, 137);
+    overflow: hidden;
+}
+#mainslider ul{
+    position: relative;
+    top:0;
+    left:0
+}
+#mainslider ul li{
+    width: 100%;
+    height: 300px;
+}
+
+
+
+#contents{
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+#contents>div{width: 33.3333%;}
+/* #contents>div:nth-child(1){background: yellow;}
+#contents>div:nth-child(2){background: rgb(225, 44, 225);} 
+#contents>div:nth-child(3){background: rgb(0, 255, 17);} */
+
+
+
+.notice_gallery{padding: 10px;}
+.notice_gallery .tabs{}
+.notice_gallery .tabs ul{display: flex;}
+.notice_gallery .tabs ul li{border: 1px solid #e71212;}
+.notice_gallery .tabs ul li.active{background: #f84141;}
+.notice_gallery .tabs ul li.active a{color: #fff}
+.notice_gallery .tabs ul li a{
+    display: block;
+    padding:5px 10px;
+}
+
+
+
+.notice_gallery .tabContent{
+    background: #fff;
+    height: 140px;
+    position: relative;
+}
+.notice_gallery .tabContent>div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:#fff;
+    padding: 10px;
+}
+.notice_gallery .tabContent>.notice{}
+.notice_gallery .tabContent>.notice ul{}
+.notice_gallery .tabContent>.notice ul li{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+}
+.notice_gallery .tabContent>.notice ul li a{
+    width:80%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+.notice_gallery .tabContent>.gallery{display: none}
+.notice_gallery .tabContent>.gallery ul{display: flex;}
+.notice_gallery .tabContent>.gallery ul li:not(:last-child){
+    margin-right: 10px;
+}
+.notice_gallery .tabContent>.gallery ul li img{
+    width: 100%;
+    height: 90%;
+}
+
+
+
+.banner, .goto{
+    padding: 10px;
+}
+.banner h2, .goto h2{
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.banner ul{display: flex;}
+.banner ul>li{}
+.banner ul>li>a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+.banner ul>li>a>img{
+    width: 100%;
+}
+.banner ul>li>a>span{
+    font-size: 12px;
+}
+
+
+
+.goto>div{
+    padding-top: 10px;
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+}
+.goto>div img{
+    width: 100%;
+}
+.goto>div span{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f67f7f;
+    font-weight: bold;
+    background: #ddd;
+}
+
+
+
+
+#footer{
+    width: 100%;
+    height: 100px;
+    background: #838383;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+#footer h2 a{color: rgba(255, 255, 255, .7);}
+#footer .copyright{}
+
+.sns{}
+.sns ul{display: flex;}
+.sns ul>li{
+    margin-left: 10px;
+}
+.sns ul>li>a{color: rgba(255, 255, 255, .7);}
+
+
+
+
+/* 팝업창 */
+.modal{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    display: none;
+}
+.modal .pop{
+    width: 500px;
+    height: 500px;
+    background: #fff;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+}
+.modal .pop h2{
+    padding-bottom: 10px;
+    border-bottom: 5px double #ccc;
+}
+.modal .pop p{
+    margin-top: 20px;
+    line-height: 180%;
+
+}
+.modal .pop .close{
+    background: red;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    position: relative;
+    top: 200px; left: 390px;
+}
