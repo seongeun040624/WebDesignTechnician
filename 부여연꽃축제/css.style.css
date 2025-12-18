@@ -1,0 +1,275 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{color: #333; text-decoration: none;}
+
+html, body{
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+#wrap{
+    width: 1000px;
+    height: 650px;
+    display: flex;
+}
+
+
+#header{
+    width: 200px;
+    height: 100%;
+    text-align: center;
+    background:rgba(221, 160, 221, 0.423);
+}
+#header h1{
+    margin-top: 30px;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    color: plum;
+    font-size: 24px;
+}
+
+
+#header #nav{
+    margin: 10px;
+    margin-top: 40px;
+}
+#nav>ul>li{
+    border: 1.5px solid #fff;
+    margin-top: -1px;
+}
+#nav>ul>li>a{
+    padding: 10px 0;
+    display: block;
+    color: #fff;
+    transition: .4s;
+}
+#nav>ul>li:hover>a{
+    background: plum;
+    font-weight: bold;
+}
+
+
+#nav>ul>li>ul{
+    display: none;
+    border: 1px solid #ddd;
+}
+#nav>ul>li>ul>li>a{
+    display: block;
+    padding: 8px 0;
+    font-size: 14px;
+    color: plum;
+    background: rgb(229, 229, 229);
+}
+#nav>ul>li>ul>li:hover>a{
+    background: #fff;
+    font-weight: bold;
+}
+
+
+#main{
+    width: 800px;
+    height: 550px;
+}
+
+.imgslider{
+    width: 100%;
+    height: 350px;
+    background: #ddd;
+    overflow: hidden;
+}
+.imgslider ul{
+    position: relative;
+}
+.imgslider ul li a img{
+    width: 800px;
+    height: 350px;
+    object-fit: cover;
+}
+
+
+.contents{
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+.contents>div{
+    width: 33.3333%;
+    padding: 10px;
+}
+.contents>div>h3{
+    color: #333;
+    margin-bottom: 5px;
+}
+
+
+.noticeWrap .notice ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    border-bottom: 1px solid #333;
+    padding: 5px 10px;
+}
+.noticeWrap .notice ul li a{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 60%;
+}
+.noticeWrap .notice ul li span{
+    color: #333;
+    font-size: 13px;
+}
+.noticeWrap .notice ul li:hover a{
+    text-decoration: underline;
+    color: rgb(230, 136, 230);
+}
+
+
+.galleryWrap .gallery{
+    background: whitesmoke;
+    height: 145px;
+}
+.galleryWrap .gallery ul{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+}
+.galleryWrap .gallery ul li span{
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #333;
+    letter-spacing: -1px;
+}
+.galleryWrap .gallery ul li:hover span{
+    color: #000; 
+    font-weight: bold;
+}
+.galleryWrap .gallery ul li a img{
+    width: 95%;
+    object-fit: cover;
+}
+
+
+.gotoWrap .goto{
+    overflow: hidden;
+    height: 145px;
+    text-align: center;
+    position: relative;
+}
+.gotoWrap .goto img{width: 100%; object-fit: cover;}
+.gotoWrap .goto span{
+    font-size: 14px;
+    background: rgba(0, 0 ,0, .5);
+    width: 100%;
+    position: absolute;
+    bottom: 0; left: 0;
+    padding: 5px 0;
+    color: #9a9a9a;
+}
+.gotoWrap .goto:hover span{
+    color: #fff;
+    font-weight: bold;
+}
+
+
+
+
+#footer{
+    width: 800px;
+    height: 100px;
+    background: #ddd;
+    display: flex;
+}
+#footer .copy{
+    width: 80%;
+    height: 100%;
+    padding: 10px;
+    color: #333;
+}
+#footer .copy h5{}
+#footer .copy p{
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+
+
+#footer .snsSite{
+    display: block;
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+}
+#footer .snsSite .sns{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+#footer .snsSite .sns .Sns{
+    width: 20px; 
+    height: 20px; 
+    background: plum;
+    margin: 0 7px;
+}
+
+#footer .snsSite .site{
+    display: block;
+    height: 50px;
+    line-height: 25px;
+    text-align: center;
+}
+.site form{
+    
+}
+.site select{
+    padding: 5px;
+    border: none;
+    width: 120px;
+}
+.site select option{
+    
+}
+
+
+.popup{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0 ,0, .5);
+    position: absolute;
+    top: 0; left: 0;
+}
+.popup .modal{
+    width: 400px;
+    height: 300px;
+    background: #fff;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+.popup .modal h3{
+    border-bottom: 3px double #ddd;
+    color: #333;
+    padding-bottom: 10px;
+}
+.popup .modal p{
+    padding: 5px;
+    padding-top: 10px;
+    line-height: 150%;
+}
+.popup .modal .close{
+    background: red;
+    padding: 5px 10px;
+    color: #fff;
+    border: none;
+    position: relative;
+    top: 17px; left: 306px;
+    cursor: pointer;
+}
