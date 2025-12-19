@@ -1,0 +1,245 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{color: #333; text-decoration: none;}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+#wrap{
+    width: 1000px;
+    height: 650px;
+    display: flex;
+}
+
+#header{
+    width: 200px;
+    height: 100%;
+    background: whitesmoke;
+    text-align: center;
+}
+#header h1{
+    padding: 20px 0;
+}
+#header #nav{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
+#nav>ul{}
+#nav>ul>li{
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: -1px;
+    display: flex;
+    height: 40px;
+    padding: 10px 0;
+    transition: .3s;
+    position: relative;
+}
+#nav>ul>li>a{
+    display: block;
+    /* padding: 10px 0; */
+    transition: .3s;
+    margin: 0 auto;
+}
+#nav>ul>li:hover{background: red;}
+#nav>ul>li:hover>a{
+    font-weight: bold;
+    color: #fff;
+}
+
+#nav>ul>li>ul{
+    z-index: 10;
+    display: none;
+    background: #fff;
+    position: absolute;
+    left: 188px; top: 0px;
+}
+#nav>ul>li>ul>li{
+    width: 130px;
+    height: 38.2px;
+    padding: 10px 0;
+}
+#nav>ul>li>ul>li>a{
+    display: block;
+    transition: .3s;
+    margin: 0 auto;
+}
+#nav>ul>li>ul>li:hover{ background: red;}
+#nav>ul>li>ul>li:hover>a{color: #fff;}
+
+
+
+
+
+#main{
+    width: 800px;
+    height: 550px;
+}
+
+.imgslider{
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+.imgslider ul
+{display: flex;
+    position: relative;
+    top: 0; left: 0;
+}
+.imgslider ul li img{
+    width: 800px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contents{
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+.contents>div{
+    width: 33.3333%;
+    padding: 10px;
+}
+.contents>div>h3{margin-bottom: 5px;}
+.contents>div>div{height: 145px; background: whitesmoke;}
+
+
+.nWrap .notice ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 13px;
+    padding: 5px 10px;
+}
+.nWrap .notice ul li a{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60%;
+}
+.nWrap .notice ul li span{color: #333;}
+.nWrap .notice ul li:hover a{color: red; text-decoration: underline;}
+
+
+
+.gWrap .gallery ul{
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    text-align: center;
+    margin: 0 auto;
+    height: 145px;
+    padding-top: 5px;
+}
+.gWrap .gallery ul li img{
+    width: 100%;
+    height: 98%;
+    object-fit: cover;
+}
+
+
+.bWrap .banner{
+    background: none;
+    width: 95%;
+    height: 145px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.bWrap .banner ul{
+    position: relative;
+    top: 0; left: 0;
+}
+.bWrap .banner ul li a img{
+    display: block;
+    width: 246.66px;
+    height: 145px;
+    object-fit: cover;
+}
+
+
+
+#footer{
+    width: 800px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ddd;
+}
+
+
+#footer h1{
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+#footer h1 img{
+    width: 100%;
+    /* height: 50px; */
+    object-fit: cover;
+
+}
+#footer .footerR{padding:0 20px;}
+#footer .footerR .menu ul{
+    display: flex;
+    justify-content: space-between;
+}
+#footer .footerR .menu ul li{margin: 0 10px;}
+#footer .footerR .menu ul li a{
+    font-size: 14px;
+}
+#footer .footerR .menu ul li:hover a{color: red; text-decoration: underline;}
+#footer .footerR .copy{
+    color: #333;
+    margin: 0 10px;
+}
+#footer .footerR .copy h5{
+    margin: 4px 0;
+}
+#footer .footerR .copy p{font-size: 12px;}
+
+
+.popup{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .5);
+    position: absolute;
+    top: 0; left: 0;
+}
+.popup .modal{
+    width: 400px;
+    height: 300px;
+    border: #ddd 10px solid;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+}
+.popup .modal h3{
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+.popup .modal p{
+    line-height: 150%;
+    padding-top: 10px;
+}
+.popup .modal .close{
+    background: red;
+    color: #fff;
+    padding: 5px;
+    border: none;
+    position: relative;
+    left: 307px;
+    cursor: pointer;
+}
