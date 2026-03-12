@@ -1,0 +1,242 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none; color: #333;}
+html, body{
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+
+#header{
+    width: 200px;
+    height: 820px;
+    background: whitesmoke;
+    border-right: 1px solid #ccc;
+    float: left;
+}
+#header h1{padding-top: 20px;}
+
+
+#header nav{
+    margin-top: 20px;
+    padding: 0 10px;
+}
+#header nav>ul>li{
+    transition: .3s;
+}
+#header nav>ul>li:hover{
+    background: #290b00;
+}
+#header nav>ul>li:hover>a{
+    color: #fff;
+}
+#header nav>ul>li>a{
+    border: 1px solid #ccc;
+    margin-bottom: -1px;
+    padding: 10px;
+    display: block;
+    transition: .3s;
+}
+#header nav>ul>li>ul{
+    display: none;
+}
+#header nav>ul>li>ul>li{
+    background: rgb(255, 246, 246);
+    border: 1px solid #ccc;
+    margin-bottom: -1px;
+    padding: 10px;
+}
+#header nav>ul>li>ul>li:hover{
+    background: rgb(241, 226, 199);
+}
+#header nav>ul>li>ul>li>a{
+    transition: .3s;
+    color: #290b00;
+}
+
+
+.contents{
+    width: 400px;
+    height: 820px;
+    float: left;
+}
+.contents>div{
+    width: 100%;
+}
+.contents h2{
+    color: #333;
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: 3px double #290b00;
+}
+
+.contents .notice{
+    height: 40%;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+}
+.contents .notice ul{margin-top: 20px;}
+.contents .notice ul li{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+    padding: 0 10px;
+}
+.contents .notice ul li a{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.contents .notice ul li:hover a{color: #000; font-weight: 500;}
+.contents .notice ul li a em{
+    color: #555;
+    font-style: normal;
+}
+
+
+.contents .gallery{
+    height: 40%;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+}
+.contents .gallery ul{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.contents .gallery ul li{
+    padding: 0 5px;
+}
+.contents .gallery ul li a img{
+    width: 100%;
+    height: 146px;
+}
+.contents .gallery ul li a span{
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.contents .links{
+    height: 20%;
+    padding: 20px;
+}
+.contents .links ul{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contents .links ul li a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contents .links ul li a img{
+    width: 90%;
+}
+.contents .links ul li a:hover span{
+    color: #000;
+    font-weight: bold;
+}
+
+
+.slider{
+    width: calc(100% - 600px);
+    height: 820px;
+    float: left;
+    overflow: hidden;
+}
+.slider ul{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.slider ul li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%; left: 0;
+}
+.slider ul li:first-child{top: 0;}
+.slider ul li img{
+    width: 100%;
+    height: 820px;
+    object-fit: cover;
+}
+
+
+#footer{
+    width: 100%;
+    height: 100px;
+    background: #333;
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer .footerLogo{
+    width: 200px;
+}
+
+
+#footer .copyright{
+    flex-grow: 1;
+}
+#footer .copyright p{
+    width: 100%; 
+    text-align: center;
+    color: #290b00;
+}
+
+#footer .family{
+    width: 200px;
+}
+#footer .family select{
+    padding: 5px 10px;
+}
+
+.popup{
+    display: none;
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+}
+.popup .modal{
+    background: #fff;
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+}
+.popup .modal h3{
+    border-bottom: 3px dotted #290b00;
+    padding-bottom: 10px;
+}
+.popup .modal p{
+    margin-top: 30px;
+    line-height: 160%;
+    letter-spacing: .5px;
+    padding: 0 10px;
+}
+.popup .modal button{
+    background: #ccc;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    position: relative;
+    top: 130px; left: 375px;
+    transition: .3s;
+    cursor: pointer;
+}
+.popup .modal button:hover{
+    background: #290b00;
+}
