@@ -12,17 +12,17 @@ $(function(){
 
     setInterval(function(){
         let prev = slide.eq(current);
-        move(prev, 0, '-100%');
+        move(prev, 1, 0);
 
         current++;
         if(current == slide.length){current=0;}
 
         let next = slide.eq(current);
-        move(next, '100%', 0);
+        move(next, 0, 1);
     }, 3000);
 
     function move(tg, start, end){
-        tg.css('top', start).stop().animate({top:end}, 500);
+        tg.css('opacity', start).stop().animate({opacity:end}, 500);
     }
 
     //popup
