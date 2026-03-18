@@ -226,6 +226,7 @@ html, body{
     width: 200px;
     line-height: 120px;
     height: 100%;
+    padding-top: 10px;
 }
 #footer h1 a{
     display: block;
