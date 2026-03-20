@@ -1,0 +1,298 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{color: #333; text-decoration: none;}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+
+#header{
+    width: 200px;
+    height: 850px;
+    background: wheat;
+    float: left;
+}
+#header h1{margin-top: 20px;}
+#header h1 a{
+    display: block;
+    text-align: center;
+}
+#header h1 a img{}
+
+#nav{margin-top: 30px;}
+#nav>ul.main{}
+#nav>ul.main>li{
+    width: 180px;
+    background: green;
+    margin: 0 auto;
+    margin-top: -1px;
+    transition: .3s;
+}
+#nav>ul.main>li:hover{background: #0c4100;}
+#nav>ul.main>li:hover>a{ font-weight: bold;}
+#nav>ul.main>li>a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    transition: .3s;
+    color: #ffff99;
+}
+#nav>ul.main>li>ul{display: none;}
+#nav>ul.main>li>ul>li{}
+#nav>ul.main>li>ul>li:hover>a{
+    background: #59c840;
+    font-weight: bold;
+}
+#nav>ul.main>li>ul>li>a{
+    display: block;
+    padding: 15px 10px;
+    text-align: center;
+    background: #eee;
+    transition: .3s;
+    color: #0c4100;
+}
+
+#nav>ul.sub{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+#nav>ul.sub>li:hover>a{color: #111;}
+#nav>ul.sub>li>a{
+    display: block;
+    font-size: 14px;
+    padding: 0 15px;
+    position: relative;
+}
+#nav>ul.sub>li:first-child>a::after{
+    position: absolute;
+    top: 3px; right: 0;
+    content: '';
+    background: #555;
+    width: 1px;
+    height: 16px;
+}
+
+
+#main{
+    width: calc(100% - 200px);
+    height: 850px;
+    float: left;
+}
+#main .slider{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.slider ul{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.slider ul li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%; left: 0;
+}
+.slider ul li:first-child{top: 0;}
+
+.link{
+    position: absolute;
+    top: 0; right: 0;
+    background: #0c4100b7;
+    padding: 10px;
+}
+.link ul li:hover a{opacity: .7;}
+.link ul li a{
+    display: block;
+    padding: 5px 0;
+    transition: .3s;
+}
+
+
+#main .banner{
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .txt{
+    color: #eee;
+    background: rgba(0, 0, 0, .4);
+    width: 97%;
+    height: 85%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.banner .txt h4{font-size: 20px;}
+.banner .txt:hover{background: rgba(0, 0, 0, .6);}
+
+
+#main .contents{
+    width: 100%;
+    height: 250px;
+    padding: 20px 0;
+}
+.contents .tabs{}
+.contents .tabs ul{display: flex;}
+.contents .tabs ul li{
+    background: #ddd;
+    border: 1px solid #ddd;
+    margin-right: -1px;
+}
+.contents .tabs ul li.active{
+    background: #fff;
+}
+.contents .tabs ul li.active a{
+    color: #0c4100; 
+    font-weight: bold;
+}
+.contents .tabs ul li a{
+    display: block;
+    padding: 5px 20px;
+}
+
+
+.contents .tabContents{}
+.contents .tabContents .notice{
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    padding-bottom: 10px;
+}
+.contents .tabContents .notice ul{
+    padding: 0 20px;
+}
+.contents .tabContents .notice ul li{
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #ccc;
+    padding: 0 10px;
+}
+.contents .tabContents .notice ul li:hover a{
+    color: #111;
+}
+.contents .tabContents .notice ul li a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contents .tabContents .notice ul li a span{
+    color: #666;
+    font-size: 14px;
+}
+.contents .tabContents .gallery{
+    display: none;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    padding: 17px 0;
+}
+.contents .tabContents .gallery ul{
+    display: flex;
+    padding: 0 40px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#footer{
+    width: 100%;
+    height: 100px;
+    background: #333;
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer h2{
+    margin-top: 5px;
+    padding-right: 20px;
+}
+#footer h2 a{
+    display: block;
+    text-align: center;
+}
+#footer h2 a img{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+}
+#footer .copy{
+    flex-grow: 1;
+    border-left: 1px solid #666;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer .sns{}
+#footer .sns ul{
+    display: flex;
+    margin-right: 20px;
+}
+#footer .sns ul li{
+    padding: 0 10px;
+}
+#footer .sns ul li a{
+    display: block;
+}
+#footer .sns ul li a img{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+}
+
+
+.pop{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    position: absolute;
+    top: 0; left: 0;
+}
+.pop .modal{
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+}
+.pop .modal h3{
+    padding-bottom: 10px;
+    border-bottom: 5px double #0c4100;
+}
+.pop .modal p{
+    margin-top: 10px;
+    line-height: 170%;
+    padding: 0 5px;
+}
+.pop .modal button{
+    border: none;
+    background: #ccc;
+    padding: 5px 10px;
+    position: relative;
+    top: 210px; left: 170px;
+    cursor: pointer;
+}
+.pop .modal button:hover{
+    background: #0c4100;
+    color: #eee;
+}
